@@ -1,0 +1,7 @@
+# Set the default behavior, in case poeple don't have core.autocrlf set.
+
+*.adoc text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.conf text eol=lf
+
