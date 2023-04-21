@@ -54,9 +54,6 @@ pkill tmux # kill all tmux sessions
 |kbd:[prefix + "]
 |choose session.
 
-|kbd:[prefix + ']
-|choose window.
-
 |kbd:[prefix + S]
 |new session.
 
@@ -69,25 +66,41 @@ pkill tmux # kill all tmux sessions
 |kbd:[prefix] + <kbd:[c] or kbd:[Ctrl + c]>
 |new session.
 
-|kbd:[prefix] + <kbd:[h] or kbd:[l]>
-|switch window to previous or next.
+|kbd:[prefix] + <kbd:[h] or kbd:[l]> or <kbd:[Ctrl], kbd:[h] or kbd:[Ctrl], kbd:[l]>
+|switch window to previous kbd:[h] or next kbd:[l].
 
 |kbd:[prefix] + <kbd:[H] or kbd:[L]>
-|switch client next or previous.
+|switch client previous kbd:[H] or next kbd:[L].
 
 |kbd:[prefix] + kbd:[Ctrl], kbd:[l]
 |clear window.
 
-2+^.^|*split windows*
+|kbd:[prefix] + <kbd:[Ctrl], kbd:[s] or kbd:[Ctrl], kbd:[r]>
+|save kbd:[s] or restore kbd:[r] work status.
 
-|kbd:[prefix + F12]
-|vertical split window and open htop.
+|kbd:[prefix + ']
+|choose window.
+
+2+^.^|*session*
+
+2+^.^|*window*
+
+2+^.^|*pane*
 
 |kbd:[prefix] + <kbd:[s] or kbd:[v]>
 |split window vertical kbd:[s], horizontal kbd:[v].
 
 |kbd:[prefix] + <kbd:[+] or kbd:[=] or kbd:[<] or kbd:[>]>
-| resize pane to the up kbd:[+] or down kbd:[=] left kbd:[<] or right kbd:[>].
+|resize pane to the up kbd:[+] or down kbd:[=] left kbd:[<] or right kbd:[>].
+
+|kbd:[prefix] + <kbd:[j] or kbd:[k]> or <kbd:[Ctrl], kbd:[j] or kbd:[Ctrl], kbd:[k]>
+|switch pane to previous kbd:[j] or next kbd:[k].
+
+|kbd:[prefix] + <kbd:[J] or kbd:[K]>
+|swap pane with previous kbd:[J] or next kbd:[K].
+
+|kbd:[prefix + F12]
+|vertical split window and open htop.
 
 |===
 
