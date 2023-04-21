@@ -4,11 +4,11 @@
 // :imagesdir: images
 
 == Install
-
 run install script
 
 [source, shell]
 ----
+chmod +x install.sh
 ./install.sh
 ----
 
@@ -112,5 +112,6 @@ run remove script
 
 [source, shell]
 ----
+chmod +x ./remove.sh
 ./remove.sh
 ----
