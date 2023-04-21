@@ -1,6 +1,7 @@
-:experimental:
-
 = TMUX
+:experimental:
+:toc: left
+// :imagesdir: images
 
 == Install
 
@@ -12,6 +13,8 @@ run install script
 ----
 
 == Description
+
+This tmux configuration uses many of the same shortcuts as vim.
 
 === Usage
 
@@ -27,19 +30,69 @@ pkill tmux # kill all tmux sessions
 
 ==== Keyboard shortcuts
 
+|kbd:[prefix], kbd:[d]
+|.
+
 |===
 |shortcut |description
-|kbd:[Ctrl + w]
-|prefix key.
+
+|kbd:[Ctrl], kbd:[w]
+|*prefix key*.
+
+|kbd:[prefix + d] or kbd:[Ctrl], kbd:[d]
+|detach client.
+
+|kbd:[prefix + r]
+|reload tmux config.
+
+|kbd:[prefix + w]
+|choose tree.
+
+|kbd:[prefix + D]
+|choose client.
+
+|kbd:[prefix + "]
+|choose session.
+
+|kbd:[prefix + ']
+|choose window.
+
+|kbd:[prefix + S]
+|new session.
+
+|kbd:[prefix] + kbd:[Alt], kbd:[r]
+|rename session.
+
+|kbd:[prefix + R]
+|rename window.
+
+|kbd:[prefix + c] or kbd:[prefix] + kbd:[Ctrl], kbd:[c]
+|new session.
+
+|kbd:[prefix + h] or kbd:[l]
+|switch window to previous or next.
+
+
+|kbd:[prefix] + kbd:[H or L]
+|switch client next or previous.
+
+|kbd:[prefix] + kbd:[Ctrl], kbd:[l]
+|clear window.
+
 2+^.^|*split windows*
+
 |kbd:[prefix + F12]
 |vertical split window and open htop.
+
 |kbd:[prefix + s]
 |vertical split window.
+
 |kbd:[prefix + v]
 |horizontal split window.
+
 |kbd:[prefix + >] or kbd:[<]
 | resize pane to the left or right.
+
 |kbd:[prefix + +] or kbd:[=]
 | resize pane to the up or down.
 |===
