@@ -4,11 +4,18 @@
 
 == Install
 
+run install script
+
+[source, shell]
+----
+./install.sh
+----
+
 == Description
 
 === Usage
-[[app-listing]]
-[source,shell]
+
+[source, shell]
 ----
 tmux # start tmux
 tmux new -s <session name> # create a new session
@@ -19,29 +26,29 @@ pkill tmux # kill all tmux sessions
 ----
 
 ==== Keyboard shortcuts
+
 |===
 |shortcut |description
-
 |kbd:[Ctrl + w]
 |prefix key.
-
 2+^.^|*split windows*
-
 |kbd:[prefix + F12]
 |vertical split window and open htop.
-
 |kbd:[prefix + s]
 |vertical split window.
-
 |kbd:[prefix + v]
 |horizontal split window.
-
 |kbd:[prefix + >] or kbd:[<]
 | resize pane to the left or right.
-
 |kbd:[prefix + +] or kbd:[=]
 | resize pane to the up or down.
-
 |===
 
 == Remove
+
+run remove script
+
+[source, shell]
+----
+./remove.sh
+----
