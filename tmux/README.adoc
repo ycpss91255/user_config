@@ -2,4 +2,24 @@
 
 == Install
 
-== RemovE
+== Usage
+|===
+|shortcut|description
+
+|kbd:[Ctrl + w]
+|prefix key
+
+|kbd:[prefix + F12]
+|vertical split window and open htop
+
+|kbd:[prefix + s]
+|vertical split window
+
+|kbd:[prefix + v]
+|horizontal split window
+
+|kbd:[prefix + > or <]
+|
+|===
+
+== Remove
