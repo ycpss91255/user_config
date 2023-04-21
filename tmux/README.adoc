@@ -66,14 +66,13 @@ pkill tmux # kill all tmux sessions
 |kbd:[prefix + R]
 |rename window.
 
-|kbd:[prefix] + kbd:[c or Ctrl + c]
+|kbd:[prefix] + <kbd:[c] or kbd:[Ctrl + c]>
 |new session.
 
-|kbd:[prefix + h] or kbd:[l]
+|kbd:[prefix] + <kbd:[h] or kbd:[l]>
 |switch window to previous or next.
 
-
-|kbd:[prefix] + [kbd:[H] or kbd:[L]]
+|kbd:[prefix] + <kbd:[H] or kbd:[L]>
 |switch client next or previous.
 
 |kbd:[prefix] + kbd:[Ctrl], kbd:[l]
@@ -84,17 +83,12 @@ pkill tmux # kill all tmux sessions
 |kbd:[prefix + F12]
 |vertical split window and open htop.
 
-|kbd:[prefix + s]
-|vertical split window.
+|kbd:[prefix] + <kbd:[s] or kbd:[v]>
+|split window vertical kbd:[s], horizontal kbd:[v].
 
-|kbd:[prefix + v]
-|horizontal split window.
+|kbd:[prefix] + <kbd:[+] or kbd:[=] or kbd:[<] or kbd:[>]>
+| resize pane to the up kbd:[+] or down kbd:[=] left kbd:[<] or right kbd:[>].
 
-|kbd:[prefix + >] or kbd:[<]
-| resize pane to the left or right.
-
-|kbd:[prefix + +] or kbd:[=]
-| resize pane to the up or down.
 |===
 
 == Remove
