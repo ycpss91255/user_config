@@ -66,14 +66,14 @@ pkill tmux # kill all tmux sessions
 |kbd:[prefix + R]
 |rename window.
 
-|kbd:[prefix + c] or kbd:[prefix] + kbd:[Ctrl], kbd:[c]
+|kbd:[prefix] + kbd:[c or Ctrl + c]
 |new session.
 
 |kbd:[prefix + h] or kbd:[l]
 |switch window to previous or next.
 
 
-|kbd:[prefix] + kbd:[H or L]
+|kbd:[prefix] + [kbd:[H] or kbd:[L]]
 |switch client next or previous.
 
 |kbd:[prefix] + kbd:[Ctrl], kbd:[l]
