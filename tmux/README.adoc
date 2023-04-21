@@ -30,6 +30,8 @@ pkill tmux # kill all tmux sessions
 
 ==== Keyboard shortcuts
 
+// TODO: review list
+
 |kbd:[prefix], kbd:[d]
 |.
 
