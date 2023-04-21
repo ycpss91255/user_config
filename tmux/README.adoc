@@ -31,14 +31,4 @@
 
 |===
 
-// [cols="3*",options="header"]
-|===
-| Header 1 | Header 2 | Header 3
-| 2+^.^| 跨欄置中的內容
-| Cell 4 | Cell 5
-|===
-
-
-
-
 == Remove
