@@ -1,0 +1,59 @@
+set number
+set nocompatible
+syntax on
+set showmode
+set showcmd
+set encoding=utf-8
+set t_Co=256
+filetype indent on
+set autoindent
+set smartindent
+syntax enable
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+set cursorline
+set textwidth=80
+set wrap
+set linebreak
+set wrapmargin=2
+set scrolloff=15
+set laststatus=2
+set ruler
+set showmatch
+set hlsearch
+set incsearch
+set autoread
+set history=1000
+set listchars=tab:»■,trail:■
+set list
+set noerrorbells
+set visualbell
+set wildmenu
+set wildmode=longest:list,full
+
+call plug#begin('~/.vim/bundle')
+    " 可以使用 \cc \cu 等指令進行註解編輯
+    Plug 'preservim/nerdcommenter'
+    " 檔案總管
+    Plug 'preservim/nerdtree'
+    " 狀態列
+    Plug 'itchyny/lightline.vim'
+    " 開始畫面
+    Plug 'mhinz/vim-startify'
+    " 繁體中文說明文件
+    Plug 'lazywei/vim-doc-tw'
+    " 彩虹括號
+    Plug 'frazrepo/vim-rainbow'
+    " 自動補全括號
+    Plug 'jiangmiao/auto-pairs'
+
+call plug#end()
+
+" 狀態列配色方案
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+" Ctrl+N 開啟予隱藏 NERDTree
+nmap <C-n> :NERDTreeToggle<CR>
