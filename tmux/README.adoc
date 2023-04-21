@@ -12,10 +12,10 @@
 |kbd:[Ctrl + w]
 |prefix key.
 
+2+^.^| split windows
+
 |kbd:[prefix + F12]
 |vertical split window and open htop.
-
-2+^.^| *跨欄置中的內容*
 
 |kbd:[prefix + s]
 |vertical split window.
