@@ -4,8 +4,21 @@
 
 == Install
 
-== Usage
+== Description
 
+=== Usage
+[[app-listing]]
+[source,shell]
+----
+tmux # start tmux
+tmux new -s <session name> # create a new session
+tmux a -t <session name> # attach to a session
+tmux a # attach to the last session
+tmux ls # list all sessions
+pkill tmux # kill all tmux sessions
+----
+
+==== Keyboard shortcuts
 |===
 |shortcut |description
 
