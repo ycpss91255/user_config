@@ -12,7 +12,7 @@
 |kbd:[Ctrl + w]
 |prefix key.
 
-2+^.^| split windows
+2+^.^|*split windows*
 
 |kbd:[prefix + F12]
 |vertical split window and open htop.
@@ -29,14 +29,6 @@
 |kbd:[prefix + +] or kbd:[=]
 | resize pane to the up or down.
 
-|===
-
-
-|===
-|1 >s|2 |3 |4
-^|5 2.2+^.^|6 .3+<.>m|7
-^|8
-|9 2+>|10
 |===
 
 == Remove
