@@ -8,5 +8,6 @@
 *.md text eol=lf
 *.conf text eol=lf
 
+vimrc text eol=lf
 .gitattributes text eol=lf
 LICENSE text eol=lf
