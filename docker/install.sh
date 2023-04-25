@@ -7,8 +7,7 @@ sudo apt remove -y --purge \
     containerd \
     runc
 
-sudo apt autoremove -y --purge \
-&& sudo apt update \
+sudo apt update \
 && sudo apt install -y --no-install-recommends \
     ca-certificates \
     curl \
@@ -37,9 +36,8 @@ sudo apt autoremove -y --purge \
 && sudo chown "${USER}":"${USER}" /home/"${USER}"/.docker -R \
 && sudo chmod g+rwx "/home/"${USER}"/.docker" -R \
 && sudo systemctl enable docker.service \
-&& sudo systemctl enable containerd.service
-
-if (lspci | grep -q VGA ||
+&& sudo systemctl enable containerd.service \
+&& if (lspci | grep -q VGA ||
     lspci | grep -iq NVIDIA ||
     lsmod | grep -q nvidia ||
     nvidia-smi -L >/dev/null 2>&1 | grep -iq nvidia) &&
