@@ -5,8 +5,8 @@
 username=${1:-"$USER"}
 
 sudo apt purge -y \
-    tmux \
-    && rm -rf /home/"${username}"/.tmux \
-    && rm -f /home/"${username}"/.tmux.conf
+    tmux && \
+    rm -rf /home/"${username}"/.tmux && \
+    rm -f /home/"${username}"/.tmux.conf
 
     # && rm -rf ~/.tmux/plugins/tpm \
