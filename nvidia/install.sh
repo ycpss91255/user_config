@@ -10,9 +10,7 @@ if [ -z "${installed_nvidia_drivers}" ]; then
         gnupg-agent \
     && sudo add-apt-repository -y ppa:graphics-drivers/ppa
 
-    # BUG: docker not work, wait test to normal system
     recommended_drivers=$(ubuntu-drivers devices | grep 'recommended' | awk '{print $3}')
-
     if [ -n "${recommended_drivers}" ]; then
         sudo apt update \
         && sudo apt install -y --no-install-recommends \
