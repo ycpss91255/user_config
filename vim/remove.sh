@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-vim -es -u ~/.vimrc -i NONE -c "PlugClean" -c "qa" \
+#${1}: USER NAME
+
+username=${1:-"$USER"}
+
+vim -es -u /home/"${username}"/.vimrc -i NONE -c "PlugClean" -c "qa" \
 && sudo apt purge -y \
     vim \
-&& rm -rf ~/.vim \
-&& rm -rf ~/.vimrc
+&& rm -rf /home/"${username}"/.vim \
+&& rm -rf /home/"${username}"/.vimrc
