@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt remove -y --purge \
+sudo apt purge -y --purge \
     docker \
     docker-engine \
     docker.io \
@@ -53,8 +53,3 @@ sudo apt update \
         nvidia-container-toolkit \
     && sudo systemctl restart docker
 fi
-
-# (command -v nvidia-docker >/dev/null 2>&1 || dpkg -l | grep -q nvidia-container-toolkit)
-
-# && sudo apt install -y --no-install-recommends \
-
