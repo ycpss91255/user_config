@@ -18,7 +18,32 @@ chmod +x ./install.sh
 ./install.sh
 
 # verify installation
+fish -v
 ----
+
+== Usage
+
+[source, shell]
+----
+fish
+----
+
+|===
+|shortcut |description
+
+|kbd:[ctrl + alt + d]
+|find file.
+
+|kbd:[ctrl + r]
+|find history command.
+
+|kbd:[ctrl + alt + p]
+|find process PID.
+
+|kbd:[esc], kbd:[esc]
+|fuck.
+
+|===
 
 == Remove
 
@@ -29,8 +54,20 @@ chmod +x ./remove.sh
 ./remove.sh
 
 # verify removal
-# : command not found
+fish -v
+# fish: command not found
 ----
 
 == Reference
 
+* https://github.com/nvbn/thefuck[thefuck]
+* https://github.com/jorgebucaran/fisher[fisher]
+
+* fisher plugin
+** https://github.com/oh-my-fish/plugin-thefuck[thefuck]
+** https://github.com/IlanCosman/tide[tide]
+** https://github.com/meaningful-ooo/sponge[sponge]
+** https://github.com/jorgebucaran/autopair.fish[autopair.fish]
+** https://github.com/PatrickF1/fzf.fish[fzf.fish]
+** https://github.com/edc/bass[bass]
+** https://github.com/jethrokuan/z[z]
