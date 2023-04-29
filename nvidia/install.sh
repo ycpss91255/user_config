@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 installed_nvidia_drivers=$(dpkg --get-selections | grep -oP '^nvidia-driver-\d+' | head -1)
+# TODO: add check nvidia driver new version install?
 
 if [ -z "${installed_nvidia_drivers}" ]; then
     sudo apt update && \
