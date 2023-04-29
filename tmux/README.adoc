@@ -1,15 +1,16 @@
 = TMUX
 :experimental:
 :toc: left
-// :imagesdir: images
 
 == Install
-run install script
 
 [source, shell]
 ----
 chmod +x install.sh
 ./install.sh
+
+# verify installation
+tmux -V
 ----
 
 == Description
@@ -108,10 +109,12 @@ pkill tmux # kill all tmux sessions
 
 == Remove
 
-run remove script
-
 [source, shell]
 ----
 chmod +x ./remove.sh
 ./remove.sh
+
+# verify removal
+tmux -V
+# tmux: command not found
 ----

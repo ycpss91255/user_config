@@ -1,10 +1,38 @@
 = README
+:experimental:
+:toc: left
 
 == Install
 
-== Usage
+[NOTE]
+====
+The following content needs to be converted accordingly.
+
+`<this directory>` is the directory where this README is located.
+====
+
+[source, shell]
+----
+cd <this directory>
+chmod +x ./install.sh
+./install.sh
+
+# verify installation
+nvidia-smi
+----
 
 == Remove
+
+[source, shell]
+----
+cd <this directory>
+chmod +x ./remove.sh
+./remove.sh
+
+# verify removal
+nvidia-smi
+# nvidia-smi: command not found
+----
 
 == Reference
 
