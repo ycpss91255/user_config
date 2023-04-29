@@ -18,6 +18,7 @@ chmod +x ./install.sh
 ./install.sh
 
 # verify installation
+fc-list | grep -i -e "SourceCodePro" -e "MesloLGS NF" -e "FiraCode"
 ----
 
 == Remove
@@ -29,7 +30,8 @@ chmod +x ./remove.sh
 ./remove.sh
 
 # verify removal
-# : command not found
+fc-list | grep -i -e "SourceCodePro" -e "MesloLGS NF" -e "FiraCode"
+# display nothing
 ----
 
 == Reference
