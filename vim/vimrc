@@ -1,39 +1,57 @@
-set number
-set nocompatible
-syntax on
-set showmode
-set showcmd
-set encoding=utf-8
-set t_Co=256
-filetype indent on
-set autoindent
-set smartindent
-syntax enable
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set softtabstop=4
-set cursorline
-set textwidth=80
-set wrap
-set linebreak
-set wrapmargin=2
-set scrolloff=15
-set laststatus=2
-set ruler
-set showmatch
-set hlsearch
-set incsearch
-set autoread
-set history=1000
-set listchars=tab:»■,trail:■
-set list
-set noerrorbells
-set visualbell
-set wildmenu
-set wildmode=longest:list,full
+set number " 顯示行數
+set nocompatible " 不使用 vi 相容模式
+syntax on " 語法高亮
+" syntax enable " 語法高亮
+set showmode " 顯示目前模式
+set encoding=utf-8 " 設定編碼 utf-8
+set t_Co=256 " 設定 terminal 顏色為 256
+filetype indent on " 開啟文件型別偵測與縮排
+set autoindent " 自動縮排
+set smartindent " 智慧縮排
+set expandtab " 將 tab 轉為空白
+set tabstop=4 " 設定 tab 鍵為 4 個空白
+set softtabstop=4 " 設定軟性 tab 鍵為 4 個空白
+set shiftwidth=4 " 設定 >> 鍵為 4 個空白
+set cursorline " 當前行高亮
+set textwidth=80 " 設定自動換行的行數
+set wrap " 自動換行
+set linebreak " 段落換行
+set wrapmargin=2 " 設定自動換行的邊界
+set scrolloff=15 " 設定游標距離邊界多少行時開始捲動
+set laststatus=2 " 狀態列顯示模式
+set ruler " 顯示游標位置
+set showmatch " 顯示括號配對
+set hlsearch " 搜尋，高亮標註
+set incsearch " 搜尋，即時標註
+set autoread " 自動重新讀取
+set history=1000 " 設定儲存指令的數量
+set listchars=tab:»■,trail:■ " 設定 tab 與空白顯示
+set list " 顯示 tab 與空白
+set noerrorbells " 關閉錯誤提示音
+set visualbell " 視覺化提示
+set showcmd " 顯示目前指令
+set wildmenu " 開啟命令列補全
+set wildmode=longest:list,full " 設定命令列補全
+set background=dark " 設定背景為暗色
+set path=.,/usr/include,,** " 配置檔案路徑，讓 find 指令更好用
+inoremap ;; <ESC> " 按下 ;; 等於按下 ESC 鍵
 
-call plug#begin('~/.vim/bundle')
+" F5 執行程式
+nmap <F5> :call CompileRun()<CR>
+func! CompileRun()
+        exec "w"
+    if &filetype == 'python'
+        exec "!time python %"
+    elseif &filetype == 'java'
+        exec "!javac %"
+        exec "!time java %<"
+    elseif &filetype == 'sh'
+        :!time bash %
+    endif
+endfunc
+
+
+call plug#begin('/home/' . $USER . '/.vim/bundle')
     " 可以使用 \cc \cu 等指令進行註解編輯
     Plug 'preservim/nerdcommenter'
     " 檔案總管
