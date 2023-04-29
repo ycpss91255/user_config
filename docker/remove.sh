@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# ${1}: USER NAME
+
+username=${1:-"$USER"}
+
 if (lspci | grep -q VGA ||
     lspci | grep -iq NVIDIA ||
     lsmod | grep -q nvidia ||
@@ -20,7 +24,7 @@ sudo apt purge -y \
 sudo rm /etc/apt/keyings/docker.gpg && \
 sudo rm /etc/apt/sources.list.d/docker.list && \
 sudo groupdel docker && \
-sudo gpasswd -d "${USER}" docker && \
-sudo rm -rf /home/"${USER}"/.docker && \
+sudo gpasswd -d "${username}" docker && \
+sudo rm -rf /home/"${username}"/.docker && \
 sudo systemctl disable docker.service && \
 sudo systemctl disable containerd.service
