@@ -8,4 +8,5 @@ if [ -n "${installed_nvidia_drivers}" ]; then
     sudo add-apt-repository --remove ppa:graphics-drivers/ppa && \
     sudo apt purge ubuntu-drivers-common -y && \
     sudo apt update
+    echo "Nvidia drivers removed: ${installed_nvidia_drivers}"
 fi
