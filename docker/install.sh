@@ -7,7 +7,6 @@ sudo apt purge -y --purge \
     containerd \
     runc
 
-# BUG: if meybe error and docker.list ??
 sudo apt update && \
 sudo apt install -y --no-install-recommends \
     ca-certificates \
