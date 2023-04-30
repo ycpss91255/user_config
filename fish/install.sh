@@ -45,8 +45,11 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
         fisher install oh-my-fish/plugin-thefuck && \
         fisher install edc/bass && \
         fisher install jethrokuan/z && \
+        fisher install danhper/fish-ssh-agent && \
         /home/${username}/.fzf/install --all && \
         set -U fish_user_paths /home/$username/.local/bin \$fish_user_paths"
 
-# TODO: chsh func
-# chsh -s $(which fish)
+read -rp "Change default shell?" reaction
+if [[ "$reaction" =~ ^[Yy]$ ]]; then
+    chsh -s "$(which fish)"
+fi
