@@ -47,3 +47,6 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
         fisher install jethrokuan/z && \
         /home/${username}/.fzf/install --all && \
         set -U fish_user_paths /home/$username/.local/bin \$fish_user_paths"
+
+# TODO: chsh func
+# chsh -s $(which fish)
