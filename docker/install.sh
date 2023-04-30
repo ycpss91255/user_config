@@ -32,13 +32,6 @@ sudo apt install -y --no-install-recommends \
     containerd.io \
     docker-buildx-plugin \
     docker-compose-plugin && \
-sudo groupadd docker && \
-sudo usermod -aG docker "${USER}" && \
-newgrp docker && \
-sudo chown "${USER}":"${USER}" /home/"${USER}"/.docker -R && \
-sudo chmod g+rwx "/home/${USER}/.docker" -R && \
-sudo systemctl enable docker.service && \
-sudo systemctl enable containerd.service && \
 if (lspci | grep -q VGA ||
     lspci | grep -iq NVIDIA ||
     lsmod | grep -q nvidia ||
@@ -46,7 +39,10 @@ if (lspci | grep -q VGA ||
     (command -v nvidia-smi >/dev/null 2>&1); then
     distribution=$(. /etc/os-release;echo "${ID}${VERSION_ID}") && \
     curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey \
-        | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && \
+        | sudo gpg --dearmor -o \
+            /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg.tmp  && \
+    sudo mv /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg.tmp \
+        /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && \
     curl -s -L https://nvidia.github.io/libnvidia-container/"${distribution}"/libnvidia-container.list \
         | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' \
         | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list && \
@@ -54,4 +50,11 @@ if (lspci | grep -q VGA ||
     sudo apt install -y --no-install-recommends \
         nvidia-container-toolkit && \
     sudo systemctl restart docker
-fi
+fi && \
+sudo groupadd docker
+sudo usermod -aG docker "$USER" && \
+newgrp docker && \
+sudo chown "$USER:$USER" /home/"${USER}"/.docker -R && \
+sudo chmod g+rwx "/home/${USER}/.docker" -R && \
+sudo systemctl enable docker.service && \
+sudo systemctl enable containerd.service
