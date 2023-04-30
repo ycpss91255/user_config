@@ -45,6 +45,10 @@ fish
 
 |===
 
+gitnow
+
+* https://github.com/joseluisq/gitnow/blob/master/README.md[gitnow README.md]
+
 == Remove
 
 [source, shell]
@@ -60,14 +64,19 @@ fish -v
 
 == Reference
 
+* https://www.kwchang0831.dev/dev-env/ubuntu/fish[Ubuntu 安裝 Fish Shell + Tide 主題 與各種插件
+]
 * https://github.com/nvbn/thefuck[thefuck]
 * https://github.com/jorgebucaran/fisher[fisher]
 
 * fisher plugin
-** https://github.com/oh-my-fish/plugin-thefuck[thefuck]
 ** https://github.com/IlanCosman/tide[tide]
+*** 312111233121y
 ** https://github.com/meaningful-ooo/sponge[sponge]
 ** https://github.com/jorgebucaran/autopair.fish[autopair.fish]
+** https://github.com/oh-my-fish/plugin-thefuck[thefuck]
 ** https://github.com/PatrickF1/fzf.fish[fzf.fish]
 ** https://github.com/edc/bass[bass]
-** https://github.com/jethrokuan/z[z]
+** https://github.com/joseluisq/gitnow[gitnow]
+** https://github.com/Markcial/upto[upto]
+** https://github.com/danhper/fish-ssh-agent[fish-ssh-agent]
