@@ -1,0 +1,9 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host cyc-iclab_e223-wifi
+    HostName 192.168.50.176
+    User iclab
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    # IdentityFile C:\Users\ycpss\.ssh\ycpss91255
+    # IdentityFile ~/.ssh/ycpss91255
+
