@@ -4,6 +4,7 @@ Host cyc-iclab_e223-wifi
     User iclab
     ForwardX11 yes
     ForwardX11Trusted yes
+    # Port 22
     # IdentityFile C:\Users\ycpss\.ssh\ycpss91255
     # IdentityFile ~/.ssh/ycpss91255
 
