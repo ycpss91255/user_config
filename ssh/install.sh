@@ -18,5 +18,5 @@ sudo sed -i -e 's/#\s*\(AllowTcpForwarding yes\)/\1/' \
            -e 's/#\s*\(X11DisplayOffset 10\)/\1/' \
            -e 's/#\s*\(X11UseLocalhost yes\)/\1/' \
            /etc/ssh/sshd_config && \
-sudo systemctl restart ssh && \
-sudo systemctl status ssh
+sudo systemctl restart ssh
+# sudo systemctl status ssh
