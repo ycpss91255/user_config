@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "foxundermoon.shell-format",
+        "timonwong.shellcheck",
+        "bmalehorn.vscode-fish",
+        "jeff-hykin.better-shellscript-syntax",
+        "aaron-bond.better-comments",
+        "truman.autocomplate-shell"
+    ]
+}
