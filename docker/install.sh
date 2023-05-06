@@ -56,4 +56,5 @@ newgrp docker && \
 sudo chown "$USER:$USER" /home/"${USER}"/.docker -R && \
 sudo chmod g+rwx "/home/${USER}/.docker" -R && \
 sudo systemctl enable docker.service && \
-sudo systemctl enable containerd.service
+sudo systemctl enable containerd.service && \
+sudo systemctl enable docker
