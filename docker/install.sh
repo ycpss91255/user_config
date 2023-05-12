@@ -49,6 +49,7 @@ if (lspci | grep -q VGA ||
     sudo apt install -y --no-install-recommends \
         nvidia-container-toolkit && \
     sudo systemctl restart docker
+# TODO: add /etc/docker/daemon.json : "default-runtime": "nvidia"
 fi && \
 sudo groupadd docker
 sudo usermod -aG docker "$USER" && \
